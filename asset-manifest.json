@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/NihalNadaf-UI/PracticeUI.git/static/css/main.e5c32266.css",
+    "main.js": "/NihalNadaf-UI/PracticeUI.git/static/js/main.bb139ed6.js",
+    "static/js/787.570337a9.chunk.js": "/NihalNadaf-UI/PracticeUI.git/static/js/787.570337a9.chunk.js",
+    "static/media/img3.jpg": "/NihalNadaf-UI/PracticeUI.git/static/media/img3.81b356c745fbd6eddc0d.jpg",
+    "static/media/img2.jpg": "/NihalNadaf-UI/PracticeUI.git/static/media/img2.ebec9bcff7d73700c0e0.jpg",
+    "static/media/img1.jpg": "/NihalNadaf-UI/PracticeUI.git/static/media/img1.4dbcf1aaf79253211d8a.jpg",
+    "static/media/img4.jpg": "/NihalNadaf-UI/PracticeUI.git/static/media/img4.41b87331588dbe3d2a1b.jpg",
+    "static/media/img5.jpg": "/NihalNadaf-UI/PracticeUI.git/static/media/img5.9640160dd86c41fe4f0b.jpg",
+    "index.html": "/NihalNadaf-UI/PracticeUI.git/index.html",
+    "main.e5c32266.css.map": "/NihalNadaf-UI/PracticeUI.git/static/css/main.e5c32266.css.map",
+    "main.bb139ed6.js.map": "/NihalNadaf-UI/PracticeUI.git/static/js/main.bb139ed6.js.map",
+    "787.570337a9.chunk.js.map": "/NihalNadaf-UI/PracticeUI.git/static/js/787.570337a9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e5c32266.css",
+    "static/js/main.bb139ed6.js"
+  ]
+}
