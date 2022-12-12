@@ -7,13 +7,13 @@ import img4 from "./components/img4.jpg";
 import img5 from "./components/img5.jpg";
 import {
   BrowserRouter as Router,
-  Routes,
   Route,
   BrowserRouter,
+  Switch,
+  Redirect,
 } from "react-router-dom";
 import OwlCard from "./components/OwlCard";
 
-import { Navigate } from "react-router-dom";
 import "./components/owlcarousel.css";
 import "./App.css";
 // import Hello from "./components/JsxDemo";
@@ -60,57 +60,53 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Navigate replace to="/carousel" />} />
-        <Route
-          path="/carousel"
-          element={
-            <OwlCaraousels
-              style={{
-                display: "flex",
-              }}
-            >
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={1}
-                imgSrc={img1}
-              />
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={2}
-                imgSrc={img2}
-              />
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={3}
-                imgSrc={img3}
-              />
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={4}
-                imgSrc={img4}
-              />
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={5}
-                imgSrc={img5}
-              />
+      <Switch>
+        <Route path="/carousel">
+          <OwlCaraousels style={{ display: "flex" }}>
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={1}
+              imgSrc={img1}
+            />
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={2}
+              imgSrc={img2}
+            />
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={3}
+              imgSrc={img3}
+            />
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={4}
+              imgSrc={img4}
+            />
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={5}
+              imgSrc={img5}
+            />
 
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={6}
-                imgSrc={img1}
-              />
-              <OwlCard
-                style={{ background: "#424242" }}
-                cardNo={7}
-                imgSrc={img3}
-              />
-            </OwlCaraousels>
-          }
-        />
-        <Route path="/userform" element={<UserForm />} />
-      </Routes>
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={6}
+              imgSrc={img1}
+            />
+            <OwlCard
+              style={{ background: "#424242" }}
+              cardNo={7}
+              imgSrc={img3}
+            />
+          </OwlCaraousels>
+        </Route>
+        <Route path="/userform">
+          <UserForm />
+        </Route>
+        <Redirect exact from="/" to="/carousel" />
+      </Switch>
+
       <Footer />
     </div>
   );
