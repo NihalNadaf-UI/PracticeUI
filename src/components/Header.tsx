@@ -30,6 +30,13 @@ export const Header = () => {
               {"UserForm"}
             </NavLink>
             <NavLink
+              to="/imagecarousel"
+              style={{ textDecoration: "none", color: "white", margin: "10px" }}
+            >
+              {"Image Carousel"}
+            </NavLink>
+
+            <NavLink
               to="/about"
               style={{ textDecoration: "none", color: "white", margin: "10px" }}
             >
