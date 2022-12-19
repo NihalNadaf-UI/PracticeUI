@@ -4,6 +4,7 @@ import img2 from "./components/img1.jpg";
 import img3 from "./components/img3.jpg";
 import img4 from "./components/img4.jpg";
 import img5 from "./components/img5.jpg";
+import store from "./store/stores";
 import firefox from "./components/firefox.jpg";
 import google from "./components/google.jpg";
 import ie from "./components/edge.jpg";
@@ -40,6 +41,11 @@ import SimpleCarousel from "./components/SimpleCarousel";
 import Caraousel from "./components/Caraousel";
 import { width } from "@mui/system";
 import { Button, Link } from "@mui/material";
+import ComponentA from "./components/ComponentA";
+import ComponentB from "./components/ComponentB";
+import Increment from "./components/Increment";
+import ReduxKitComponent from "./components/ReduxKitComponent";
+import { Provider } from "react-redux";
 
 function App() {
   const singlePersonName = {
@@ -60,225 +66,238 @@ function App() {
     {
       id: 3,
       first: "Vinay",
-      last: "Deshmuk",
+      last: "Des hmuk",
     },
   ];
 
   return (
     <div className="App">
-      <Header />
-      <Switch>
-        <Route path="/carousel">
-          <Caraousel
-            style={{
-              display: "flex",
-              gap: "16px",
-              height: "250px",
-            }}
-          >
-            <Card
+      <Provider store={store}>
+        <Header />
+        <Switch>
+          <Route path="/carousel">
+            <Caraousel
               style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={1}
-            />
-            <Card
-              style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={2}
-            />
-            <Card
-              style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={3}
-            />
-            <Card
-              style={{
-                background: "#424242",
-
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={4}
-            />
-            <Card
-              style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={5}
-            />
-
-            <Card
-              style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={6}
-            />
-            <Card
-              style={{
-                background: "#424242",
-                width: "280px",
-                height: "200px",
-              }}
-              cardNo={7}
-            />
-          </Caraousel>
-        </Route>
-        <Route path="/userform">
-          <UserForm />
-        </Route>
-        <Route path="/imagecarousel">
-          <Caraousel
-            style={{
-              background: "white",
-              gap: "16px",
-              display: "flex",
-              height: "250px",
-            }}
-          >
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
+                display: "flex",
+                gap: "16px",
+                height: "250px",
               }}
             >
-              <Link href="http://www.firefox.com" underline="hover">
-                <img
-                  src={firefox}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={1}
+              />
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={2}
+              />
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={3}
+              />
+              <Card
+                style={{
+                  background: "#424242",
 
-            <Card
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={4}
+              />
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={5}
+              />
+
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={6}
+              />
+              <Card
+                style={{
+                  background: "#424242",
+                  width: "250px",
+                  height: "200px",
+                }}
+                cardNo={7}
+              />
+            </Caraousel>
+          </Route>
+          <Route path="/userform">
+            <UserForm />
+          </Route>
+          <Route path="/imagecarousel">
+            <Caraousel
               style={{
-                background: "#424242",
-                marginLeft: "10px",
+                background: "white",
+                gap: "16px",
+                display: "flex",
+                height: "250px",
               }}
             >
-              <Link href="http://www.google.com" underline="hover">
-                <img
-                  src={google}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
-
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link
-                href="https://www.microsoft.com/en-in/download/internet-explorer.aspx"
-                underline="hover"
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
               >
-                <img
-                  src={ie}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
+                <Link href="http://www.firefox.com" underline="hover">
+                  <img
+                    src={firefox}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
 
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link href="http://www.gmail.com" underline="hover">
-                <img
-                  src={gmail}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
-
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link href="http://www.facebook.com" underline="hover">
-                <img
-                  src={fb}
-                  alt=""
-                  style={{ width: "300px", height: "200px" }}
-                />
-              </Link>
-            </Card>
-
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link href="http://www.instagram.com" underline="hover">
-                <img
-                  src={insta}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link
-                href="https://www.microsoft.com/en-in/download/internet-explorer.aspx"
-                underline="hover"
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
               >
-                <img
-                  src={ie}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
+                <Link href="http://www.google.com" underline="hover">
+                  <img
+                    src={google}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
 
-            <Card
-              style={{
-                background: "#424242",
-                marginLeft: "10px",
-              }}
-            >
-              <Link href="http://www.gmail.com" underline="hover">
-                <img
-                  src={gmail}
-                  alt=""
-                  style={{ width: "200px", height: "200px" }}
-                />
-              </Link>
-            </Card>
-          </Caraousel>
-        </Route>
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link
+                  href="https://www.microsoft.com/en-in/download/internet-explorer.aspx"
+                  underline="hover"
+                >
+                  <img
+                    src={ie}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
 
-        <Redirect exact from="/" to="/carousel" />
-      </Switch>
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link href="http://www.gmail.com" underline="hover">
+                  <img
+                    src={gmail}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
 
-      <Footer />
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link href="http://www.facebook.com" underline="hover">
+                  <img
+                    src={fb}
+                    alt=""
+                    style={{ width: "300px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
+
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link href="http://www.instagram.com" underline="hover">
+                  <img
+                    src={insta}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link
+                  href="https://www.microsoft.com/en-in/download/internet-explorer.aspx"
+                  underline="hover"
+                >
+                  <img
+                    src={ie}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
+
+              <Card
+                style={{
+                  background: "#424242",
+                  marginLeft: "10px",
+                }}
+              >
+                <Link href="http://www.gmail.com" underline="hover">
+                  <img
+                    src={gmail}
+                    alt=""
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                </Link>
+              </Card>
+            </Caraousel>
+          </Route>
+          <Route path="/hocA">
+            <ComponentA newValue={5} />
+          </Route>
+          <Route path="/hocB">
+            <ComponentB newValue={10} />
+          </Route>
+          <Route path="/increment">
+            <Increment />
+          </Route>
+          <Route path="/redux">
+            <ReduxKitComponent />
+          </Route>
+          <Redirect exact from="/" to="/carousel" />
+        </Switch>
+
+        <Footer />
+      </Provider>
     </div>
   );
 }

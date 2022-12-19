@@ -42,6 +42,31 @@ export const Header = () => {
             >
               {"About Us"}
             </NavLink>
+            <NavLink
+              to="/hocA"
+              style={{ textDecoration: "none", color: "white", margin: "10px" }}
+            >
+              {"HocA"}
+            </NavLink>
+            <NavLink
+              to="/hocB"
+              style={{ textDecoration: "none", color: "white", margin: "10px" }}
+            >
+              {"HocB"}
+            </NavLink>
+            <NavLink
+              to="/increment"
+              style={{ textDecoration: "none", color: "white", margin: "10px" }}
+            >
+              {"Increment"}
+            </NavLink>
+
+            <NavLink
+              to="/redux"
+              style={{ textDecoration: "none", color: "white", margin: "10px" }}
+            >
+              {"REDUX"}
+            </NavLink>
           </Tabs>
         </Toolbar>
       </AppBar>

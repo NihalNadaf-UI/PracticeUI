@@ -1,6 +1,5 @@
 import React from "react";
 import "./mycard.css";
-import img1 from "/home/josh/my-demo/src/components/img1.jpg";
 type CardProps = {
   cardno: string;
   imageSrc: string;
